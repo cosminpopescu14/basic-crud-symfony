@@ -21,7 +21,7 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
-    public function create(Product $product)
+    public function create(Product $product): void
     {
         $entityManager = $this->getEntityManager();
         try
@@ -64,7 +64,7 @@ class ProductRepository extends ServiceEntityRepository
     {
 
     }*/
-    public function delete(Product $product)
+    public function delete(Product $product): void
     {
         $entityManager = $this->getEntityManager();
         try
